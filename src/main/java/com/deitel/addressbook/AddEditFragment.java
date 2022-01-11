@@ -1,6 +1,6 @@
 // AddEditFragment.java
 // Fragment for adding a new contact or editing an existing one
-package com.example.jorge_bonilla_pacheco_2do_prueba_01;
+package com.deitel.addressbook;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -21,8 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 
-import com.example.jorge_bonilla_pacheco_2do_prueba_01.data.DatabaseDescription.Contact;
-import com.google.android.material.textfield.TextInputLayout;
+import com.deitel.addressbook.data.DatabaseDescription.Contact;
 
 public class AddEditFragment extends Fragment
    implements LoaderManager.LoaderCallbacks<Cursor> {

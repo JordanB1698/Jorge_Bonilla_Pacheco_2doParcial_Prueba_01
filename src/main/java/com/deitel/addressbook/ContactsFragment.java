@@ -1,6 +1,6 @@
 // ContactsFragment.java
 // Fragment subclass that displays the alphabetical list of contact names
-package com.example.jorge_bonilla_pacheco_2do_prueba_01;
+package com.deitel.addressbook;
 
 import android.content.Context;
 import android.database.Cursor;

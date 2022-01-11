@@ -1,22 +1,22 @@
 // MainActivity.java
 // Hosts the app's fragments and handles communication between them
-package com.example.jorge_bonilla_pacheco_2do_prueba_01;
+package com.deitel.addressbook;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.AppCompatActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.widget.Toolbar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity
-   implements com.example.jorge_bonilla_pacheco_2do_prueba_01.ContactsFragment.ContactsFragmentListener,
-        com.example.jorge_bonilla_pacheco_2do_prueba_01.DetailFragment.DetailFragmentListener,
-        com.example.jorge_bonilla_pacheco_2do_prueba_01.AddEditFragment.AddEditFragmentListener {
+   implements ContactsFragment.ContactsFragmentListener,
+   DetailFragment.DetailFragmentListener,
+   AddEditFragment.AddEditFragmentListener {
 
    // key for storing a contact's Uri in a Bundle passed to a fragment
    public static final String CONTACT_URI = "contact_uri";
 
-   private com.deitel.addressbook.ContactsFragment contactsFragment; // displays contact list
+   private ContactsFragment contactsFragment; // displays contact list
 
    // display ContactsFragment when MainActivity first loads
    @Override
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
       if (savedInstanceState == null &&
          findViewById(R.id.fragmentContainer) != null) {
          // create ContactsFragment
-         contactsFragment = new com.deitel.addressbook.ContactsFragment();
+         contactsFragment = new ContactsFragment();
 
          // add the fragment to the FrameLayout
          FragmentTransaction transaction =
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity
       }
       else {
          contactsFragment =
-            (com.deitel.addressbook.ContactsFragment) getSupportFragmentManager().
+            (ContactsFragment) getSupportFragmentManager().
                findFragmentById(R.id.contactsFragment);
       }
    }
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity
 
    // display a contact
    private void displayContact(Uri contactUri, int viewID) {
-      com.deitel.addressbook.DetailFragment detailFragment = new com.deitel.addressbook.DetailFragment();
+      DetailFragment detailFragment = new DetailFragment();
 
       // specify contact's Uri as an argument to the DetailFragment
       Bundle arguments = new Bundle();
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
 
    // display fragment for adding a new or editing an existing contact
    private void displayAddEditFragment(int viewID, Uri contactUri) {
-      com.deitel.addressbook.AddEditFragment addEditFragment = new com.deitel.addressbook.AddEditFragment();
+      AddEditFragment addEditFragment = new AddEditFragment();
 
       // if editing existing contact, provide contactUri as an argument
       if (contactUri != null) {

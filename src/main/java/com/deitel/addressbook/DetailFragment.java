@@ -1,6 +1,6 @@
 // DetailFragment.java
 // Fragment subclass that displays one contact's details
-package com.example.jorge_bonilla_pacheco_2do_prueba_01;
+package com.deitel.addressbook;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

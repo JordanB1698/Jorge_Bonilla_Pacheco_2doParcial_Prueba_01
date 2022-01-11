@@ -1,6 +1,6 @@
 // ContactsAdapter.java
 // Subclass of RecyclerView.Adapter that binds contacts to RecyclerView
-package com.example.jorge_bonilla_pacheco_2do_prueba_01;
+package com.deitel.addressbook;
 
 import android.database.Cursor;
 import android.net.Uri;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.deitel.addressbook.data.DatabaseDescription.Contact;
 
-import com.example.jorge_bonilla_pacheco_2do_prueba_01.data.DatabaseDescription.Contact;
 public class ContactsAdapter
    extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
 

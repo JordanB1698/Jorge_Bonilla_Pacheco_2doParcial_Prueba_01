@@ -1,13 +1,12 @@
 // AddressBookDatabaseHelper.java
 // SQLiteOpenHelper subclass that defines the app's database
-package com.example.jorge_bonilla_pacheco_2do_prueba_01.data;
+package com.deitel.addressbook.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import  com.example.jorge_bonilla_pacheco_2do_prueba_01.data.DatabaseDescription.Contact;
-
+import com.deitel.addressbook.data.DatabaseDescription.Contact;
 
 class AddressBookDatabaseHelper extends SQLiteOpenHelper {
    private static final String DATABASE_NAME = "AddressBook.db";
@@ -43,3 +42,17 @@ class AddressBookDatabaseHelper extends SQLiteOpenHelper {
 
 
 
+/**************************************************************************
+ * (C) Copyright 1992-2016 by Deitel & Associates, Inc. and               *
+ * Pearson Education, Inc. All Rights Reserved.                           *
+ *                                                                        *
+ * DISCLAIMER: The authors and publisher of this book have used their     *
+ * best efforts in preparing the book. These efforts include the          *
+ * development, research, and testing of the theories and programs        *
+ * to determine their effectiveness. The authors and publisher make       *
+ * no warranty of any kind, expressed or implied, with regard to these    *
+ * programs or to the documentation contained in these books. The authors *
+ * and publisher shall not be liable in any event for incidental or       *
+ * consequential damages in connection with, or arising out of, the       *
+ * furnishing, performance, or use of these programs.                     *
+ **************************************************************************/
